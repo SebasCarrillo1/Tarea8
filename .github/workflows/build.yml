@@ -2,6 +2,6 @@ on: push
 jobs:
   buid-node:
     runs-on: ubuntu-latest
-    container: mysql
+    container: nginx
     steps:
-      - run: mysql -v
+      - run: nginx -v
