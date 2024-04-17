@@ -1,7 +1,10 @@
 on: push
 jobs:
-  buid-node:
+  build-node:
     runs-on: ubuntu-latest
-    container: nginx
+    container: mongo
     steps:
-      - run: nginx -v
+      - run: |
+          apt-get update
+          apt-get install -y mongodb-clients
+          mongo -v
