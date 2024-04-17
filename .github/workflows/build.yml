@@ -2,6 +2,6 @@ on: push
 jobs:
   buid-node:
     runs-on: ubuntu-latest
-    container: nginx
+    container: mongo
     steps:
-      - run: nginx -v
+      - run: mongo -v
